@@ -449,7 +449,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 
 /* Scroll-led 3D treatment-room tour, inspired by the reference studio walkthrough. */
-.clinic-tour { height: 220vh; position: relative; background: #eaf3f0; }
+.clinic-tour { height: 360vh; position: relative; background: #eaf3f0; }
 .clinic-tour-stage { height: 100svh; min-height: 600px; position: sticky; top: 0; overflow: hidden; isolation: isolate; background: #eaf3f0; }
 .clinic-tour-stage canvas { position: absolute; inset: 0; z-index: 0; display: block; width: 100%; height: 100%; }
 .tour-fallback { position: absolute; inset: 0; z-index: 0; overflow: hidden; background: linear-gradient(180deg, #f6faf8 0 67%, #dceae6 67%); }
@@ -463,6 +463,8 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .tour-kicker { display: block; margin-bottom: 10px; color: var(--primary); font-size: 11px; font-weight: 700; letter-spacing: .14em; }
 .tour-copy h2 { color: var(--ink); font-family: 'Playfair Display', serif; font-size: clamp(29px, 3.2vw, 42px); line-height: 1.12; letter-spacing: -.025em; }
 .tour-copy p { margin-top: 12px; color: var(--muted); font-size: 15px; }
+.tour-action { display: inline-flex; align-items: center; margin-top: 17px; padding: 10px 15px; border-radius: 999px; color: #fff; background: var(--primary); font-size: 13px; font-weight: 700; transition: background .2s, transform .2s; }
+.tour-action:hover { color: #fff; background: var(--primary-dark); transform: translateY(-1px); }
 .tour-scroll-cue { position: absolute; z-index: 2; left: max(5vw, calc((100vw - 1240px) / 2)); bottom: 42px; display: flex; align-items: center; gap: 10px; color: #294947; font-size: 13px; font-weight: 600; }
 .tour-scroll-cue span { width: 18px; height: 28px; border: 1.5px solid #52817d; border-radius: 12px; position: relative; }
 .tour-scroll-cue span::after { content: ''; position: absolute; left: 7px; top: 5px; width: 2px; height: 6px; border-radius: 2px; background: var(--primary); animation: scrollNudge 1.5s ease-in-out infinite; }
@@ -474,7 +476,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 .clinic-tour.reduced-motion { height: auto; }
 .clinic-tour.reduced-motion .clinic-tour-stage { position: relative; height: min(76vh, 760px); min-height: 520px; }
 @media (max-width: 760px) {
-  .clinic-tour { height: 185vh; }
+  .clinic-tour { height: 285vh; }
   .clinic-tour-stage { min-height: 560px; }
   .tour-copy { top: 105px; left: 18px; width: min(350px, calc(100% - 36px)); padding: 20px 22px; }
   .tour-copy h2 { font-size: clamp(28px, 8vw, 36px); }
