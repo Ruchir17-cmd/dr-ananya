@@ -298,3 +298,14 @@ body.gate-locked { overflow: hidden; }
 .section-head h2 { background: linear-gradient(90deg, var(--primary), var(--accent)); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
 @media (max-width: 960px) { .implant-showcase { grid-template-columns: 1fr; } }
+
+/* Mandible image gallery */
+.mandible-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; }
+.mandible-card { min-width: 0; margin: 0; overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius); background: var(--glass); box-shadow: var(--shadow); }
+.mandible-card img { display: block; width: 100%; height: 260px; object-fit: contain; background: #07111a; }
+.mandible-card figcaption { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 13px 14px; }
+.mandible-card figcaption span { color: var(--primary); font-size: 11px; font-weight: 700; letter-spacing: .12em; }
+.mandible-card figcaption strong { color: var(--ink); font-size: 14px; }
+.clinical-note { margin-top: 18px; color: var(--muted); font-size: 12px; text-align: center; }
+@media (max-width: 960px) { .mandible-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .mandible-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .mandible-card img { height: 220px; } }

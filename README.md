@@ -8,11 +8,7 @@ Vercel serves a project that has **no `package.json`** as a pure static site —
 
 ## Deploy to Vercel (via GitHub)
 
-1. Import the repo in Vercel.
-2. Framework preset: **Other**.
-3. Build command: *(leave empty)*.
-4. Output directory: *(leave empty)*.
-5. Deploy.
+`vercel.json` explicitly sets the framework preset to **Other**, disables build/install commands, and serves the repository root as static output. Import the repository with the project root set to the repository root; no manual build step is required.
 
 ## Local preview
 
