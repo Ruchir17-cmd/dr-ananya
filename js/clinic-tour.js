@@ -21,33 +21,35 @@
     try {
       const THREE = window.THREE;
       const scene = new THREE.Scene();
-      scene.background = new THREE.Color(0xeaf3f0);
-      scene.fog = new THREE.Fog(0xeaf3f0, 18, 34);
+      scene.background = new THREE.Color(0xe4efeb);
+      scene.fog = new THREE.Fog(0xe4efeb, 24, 40);
 
       const camera = new THREE.PerspectiveCamera(53, 1, 0.1, 45);
       const renderer = new THREE.WebGLRenderer({ alpha: false, antialias: true, powerPreference: 'low-power' });
       renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.35));
-      renderer.setClearColor(0xeaf3f0, 1);
+      renderer.setClearColor(0xe4efeb, 1);
       renderer.outputEncoding = THREE.sRGBEncoding;
+      renderer.toneMapping = THREE.ACESFilmicToneMapping;
+      renderer.toneMappingExposure = 1.05;
       renderer.domElement.setAttribute('aria-hidden', 'true');
       stage.prepend(renderer.domElement);
 
       const materials = {
-        wall: new THREE.MeshStandardMaterial({ color: 0xf7faf8, roughness: 0.9 }),
-        floor: new THREE.MeshStandardMaterial({ color: 0xdceae6, roughness: 0.82 }),
-        trim: new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: 0.72 }),
-        teal: new THREE.MeshStandardMaterial({ color: 0x6fa9a2, roughness: 0.58 }),
-        darkTeal: new THREE.MeshStandardMaterial({ color: 0x397b76, roughness: 0.62 }),
-        metal: new THREE.MeshStandardMaterial({ color: 0xaebfbd, metalness: 0.45, roughness: 0.34 }),
-        wood: new THREE.MeshStandardMaterial({ color: 0xc9a982, roughness: 0.75 }),
-        glass: new THREE.MeshStandardMaterial({ color: 0xc8e6e4, emissive: 0x648f8b, emissiveIntensity: 0.16, roughness: 0.25 })
+        wall: new THREE.MeshLambertMaterial({ color: 0xe5eeea }),
+        floor: new THREE.MeshLambertMaterial({ color: 0xbacdc6 }),
+        trim: new THREE.MeshLambertMaterial({ color: 0xfafbf8 }),
+        teal: new THREE.MeshLambertMaterial({ color: 0x438b84 }),
+        darkTeal: new THREE.MeshLambertMaterial({ color: 0x286c66 }),
+        metal: new THREE.MeshPhongMaterial({ color: 0x829b98, shininess: 48 }),
+        wood: new THREE.MeshLambertMaterial({ color: 0xb98e65 }),
+        glass: new THREE.MeshLambertMaterial({ color: 0x8fcac5, emissive: 0x174a46, emissiveIntensity: 0.18 })
       };
 
-      scene.add(new THREE.HemisphereLight(0xffffff, 0xc5d6d1, 2.2));
-      const daylight = new THREE.DirectionalLight(0xfff7e9, 2.4);
+      scene.add(new THREE.HemisphereLight(0xffffff, 0x90aaa2, 1.15));
+      const daylight = new THREE.DirectionalLight(0xfff7e9, 1.7);
       daylight.position.set(-4, 8, 5);
       scene.add(daylight);
-      const softFill = new THREE.PointLight(0xc8eeea, 16, 18);
+      const softFill = new THREE.PointLight(0xc8eeea, 3.5, 18);
       softFill.position.set(1.5, 3.6, -2.3);
       scene.add(softFill);
 
@@ -145,8 +147,8 @@
 
       renderScene = () => {
         const p = progress;
-        camera.position.set(0, THREE.MathUtils.lerp(2.8, 2.35, p), THREE.MathUtils.lerp(13.2, 4.2, p));
-        camera.lookAt(0, 1.65, THREE.MathUtils.lerp(-0.8, -2.1, p));
+        camera.position.set(0, THREE.MathUtils.lerp(3.1, 2.55, p), THREE.MathUtils.lerp(15.2, 5.2, p));
+        camera.lookAt(0, 1.7, THREE.MathUtils.lerp(-0.6, -1.6, p));
         renderer.render(scene, camera);
       };
       resize();
@@ -163,7 +165,7 @@
       const distance = Math.max(1, rect.height - window.innerHeight);
       progress = clamp(-rect.top / distance, 0, 1);
     }
-    const inRoom = progress >= 0.52;
+    const inRoom = progress >= 0.76;
     if (copy && roomCopyShown !== inRoom) {
       roomCopyShown = inRoom;
       copy.classList.toggle('is-arrived', inRoom);
