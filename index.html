@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Ananya's Dental & Orthodontic Clinic | Smile Care for the Whole Family</title>
+  <meta name="description" content="Dr. Ananya's Dental & Orthodontic Clinic offers braces, aligners for children and adults, plus restorations, cleaning, bleaching, implants and complete dental care." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Immersive Gate -->
+  <div class="gate" id="gate">
+    <div class="gate-bg"></div>
+    <div class="gate-particles" id="gateParticles"></div>
+    <div class="gate-doors">
+      <div class="door door-left"></div>
+      <div class="door door-right"></div>
+    </div>
+    <div class="gate-content">
+      <div class="gate-logo">A</div>
+      <h1>Dr. Ananya's Dental Clinic</h1>
+      <p>Step inside for a brighter, healthier smile</p>
+      <button id="enterBtn" class="btn btn-primary gate-btn">Enter the Clinic →</button>
+      <small>Click to open the doors</small>
+    </div>
+  </div>
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <span>📍 near airport road, Kalani nagar main road, indore &nbsp;|&nbsp; 📞 91-8989733767, 91-7869416278 &nbsp;|&nbsp; ✉️ drananya999@gmail.com</span>
+      <div class="topbar-social">
+        <a href="#" aria-label="Facebook">f</a>
+        <a href="#" aria-label="Instagram">in</a>
+        <a href="#" aria-label="YouTube">yt</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Nav -->
+  <header class="header" id="header">
+    <div class="container nav">
+      <a href="#home" class="logo">
+        <span class="logo-mark">A</span>
+        <span class="logo-text">Dr. Ananya's<br/><small>Dental & Orthodontic Clinic</small></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#rooms">Rooms</a>
+        <a href="#services">Services</a>
+        <a href="#orthodontics">Orthodontics</a>
+        <a href="#corrections">Corrections</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#offers">Offers</a>
+        <a href="#appointment-system">Appointments</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="#contact" class="btn btn-primary nav-cta">Book Appointment</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <span class="eyebrow">Welcome to Dr. Ananya's Clinic</span>
+        <h1>Beautiful smiles start<br/>with <span class="accent">confident care</span></h1>
+        <p>Expert orthodontic treatment for children and adults — braces, clear aligners, and complete dental care under one roof. Gentle, modern, and tailored to you.</p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary">Book Appointment</a>
+          <a href="#services" class="btn btn-ghost">Explore Services</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>12+</strong><span>Years Experience</span></div>
+          <div><strong>5000+</strong><span>Happy Smiles</span></div>
+          <div><strong>98%</strong><span>Satisfaction</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-tooth">🦷</div>
+        <div class="hero-card">
+          <div class="hero-smile">😁</div>
+          <p>"My child's smile transformed in just 14 months!"</p>
+          <small>— Priya S., Parent</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container about-grid">
+      <div class="about-image">
+        <div class="img-placeholder">Dr. Ananya<br/>BDS, MDS (Orthodontics)</div>
+      </div>
+      <div class="about-text">
+        <span class="eyebrow">About Us</span>
+        <h2>A clinic built around your smile</h2>
+        <p>Dr. Ananya's Dental & Orthodontic Clinic is a modern, family-friendly practice dedicated to delivering exceptional dental and orthodontic care. From a child's first braces to adult smile makeovers, we combine advanced technology with a gentle touch.</p>
+        <ul class="checklist">
+          <li>Certified orthodontist with 12+ years of experience</li>
+          <li>Child-friendly, anxiety-free environment</li>
+          <li>Digital X-rays & 3D scanning</li>
+          <li>Transparent pricing & flexible EMI options</li>
+          <li>Sterilized, safe & hygienic clinic</li>
+        </ul>
+        <a href="#contact" class="btn btn-primary">Meet Dr. Ananya</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Procedure Rooms -->
+  <section class="section" id="rooms">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Inside the Clinic</span>
+        <h2>Our procedure rooms</h2>
+        <p>Step through each door to discover a dedicated treatment space.</p>
+      </div>
+      <div class="rooms-grid">
+        <div class="room-card reveal" data-room="Orthodontics">
+          <div class="room-door"><span>🚪</span></div>
+          <div class="room-info">
+            <h3>Orthodontics Room</h3>
+            <p>Braces, aligners & smile corrections</p>
+          </div>
+        </div>
+        <div class="room-card reveal" data-room="Cleaning">
+          <div class="room-door"><span>🚪</span></div>
+          <div class="room-info">
+            <h3>Cleaning Suite</h3>
+            <p>Scaling, polishing & hygiene</p>
+          </div>
+        </div>
+        <div class="room-card reveal" data-room="Whitening">
+          <div class="room-door"><span>🚪</span></div>
+          <div class="room-info">
+            <h3>Whitening Lab</h3>
+            <p>Bleaching & smile brightening</p>
+          </div>
+        </div>
+        <div class="room-card reveal" data-room="Restoration">
+          <div class="room-door"><span>🚪</span></div>
+          <div class="room-info">
+            <h3>Restoration Bay</h3>
+            <p>Fillings, crowns & bridges</p>
+          </div>
+        </div>
+        <div class="room-card reveal" data-room="Implants">
+          <div class="room-door"><span>🚪</span></div>
+          <div class="room-info">
+            <h3>Implant Center</h3>
+            <p>Permanent tooth replacements</p>
+          </div>
+        </div>
+        <div class="room-card reveal" data-room="Kids">
+          <div class="room-door"><span>🚪</span></div>
+          <div class="room-info">
+            <h3>Kids Zone</h3>
+            <p>Pediatric & fun dental care</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section-alt" id="services">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Our Services</span>
+        <h2>Complete dental care, all in one place</h2>
+        <p>From preventive care to advanced treatments, we cover every aspect of your oral health.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon">🦷</div>
+          <h3>Dental Cleaning</h3>
+          <p>Professional scaling & polishing to remove plaque and tartar, keeping gums healthy.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">✨</div>
+          <h3>Teeth Whitening</h3>
+          <p>Safe, effective bleaching for a brighter, confident smile in a single visit.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">🔧</div>
+          <h3>Restorations</h3>
+          <p>Tooth-colored fillings, crowns and bridges to repair and restore damaged teeth.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">🔩</div>
+          <h3>Dental Implants</h3>
+          <p>Permanent, natural-looking replacements for missing teeth with high success rates.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">👶</div>
+          <h3>Pediatric Dentistry</h3>
+          <p>Gentle, fun dental care for kids — checkups, sealants and cavity prevention.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">🛡️</div>
+          <h3>Root Canal Treatment</h3>
+          <p>Painless RCT to save infected teeth and relieve pain quickly.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">📏</div>
+          <h3>Orthodontics</h3>
+          <p>Braces & clear aligners for children and adults to straighten teeth.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon">🦷</div>
+          <h3>Extractions & Surgery</h3>
+          <p>Simple and surgical extractions including wisdom teeth, done safely.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Corridor -->
+  <section class="section" id="corridor">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Walk Through</span>
+        <h2>Our dental suite corridor</h2>
+        <p>Scroll sideways to explore every service we offer.</p>
+      </div>
+      <div class="corridor">
+        <div class="corridor-card"><div class="service-icon">🦷</div><h3>Cleaning</h3><p>Scaling & polishing</p></div>
+        <div class="corridor-card"><div class="service-icon">✨</div><h3>Whitening</h3><p>Bleaching & brightening</p></div>
+        <div class="corridor-card"><div class="service-icon">🔧</div><h3>Restorations</h3><p>Fillings & crowns</p></div>
+        <div class="corridor-card"><div class="service-icon">🔩</div><h3>Implants</h3><p>Permanent replacements</p></div>
+        <div class="corridor-card"><div class="service-icon">👶</div><h3>Pediatric</h3><p>Kids dental care</p></div>
+        <div class="corridor-card"><div class="service-icon">🛡️</div><h3>Root Canal</h3><p>Painless RCT</p></div>
+        <div class="corridor-card"><div class="service-icon">📏</div><h3>Orthodontics</h3><p>Braces & aligners</p></div>
+        <div class="corridor-card"><div class="service-icon">🦷</div><h3>Extractions</h3><p>Safe removals</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Braces Showcase -->
+  <section class="section section-alt" id="braces-showcase">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Braces</span>
+        <h2>Braces in detail</h2>
+        <p>Front, left and right views of braces treatment.</p>
+      </div>
+      <div class="braces-grid">
+        <div class="braces-card"><img src="images/bracels.jpeg" alt="Braces" /><h3>Braces</h3></div>
+        <div class="braces-card"><img src="images/bracels%20left.jpeg" alt="Braces left" /><h3>Braces - Left</h3></div>
+        <div class="braces-card"><img src="images/bracels%20right.jpeg" alt="Braces right" /><h3>Braces - Right</h3></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Implant Showcase -->
+  <section class="section" id="implant-showcase">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Implants</span>
+        <h2>Maxilla pterygoid implant region</h2>
+        <p>Advanced implant solutions for the maxilla pterygoid region.</p>
+      </div>
+      <div class="implant-showcase">
+        <img src="images/implant%20maxilla%20pterygoid%20region.jpeg" alt="Implant maxilla pterygoid region" />
+        <div>
+          <h3>Pterygoid Implant Technique</h3>
+          <p>Strategic implant placement in the pterygoid region of the maxilla for patients with bone loss, avoiding grafts and reducing treatment time.</p>
+          <ul class="checklist">
+            <li>No bone grafting required</li>
+            <li>Faster recovery</li>
+            <li>High success rate</li>
+            <li>Suitable for atrophic maxilla</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Orthodontics -->
+  <section class="section" id="orthodontics">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Orthodontics</span>
+        <h2>Braces & aligners for every smile</h2>
+        <p>Specialized orthodontic care for children, teens and adults — choose the option that fits your lifestyle.</p>
+      </div>
+      <div class="ortho-grid">
+        <div class="ortho-card reveal">
+          <h3>Metal Braces</h3>
+          <p>Durable and effective traditional braces. Ideal for children and complex cases. Colorful bands kids love.</p>
+          <ul>
+            <li>Most affordable option</li>
+            <li>Highly effective for severe misalignment</li>
+            <li>Fun colored bands for kids</li>
+          </ul>
+        </div>
+        <div class="ortho-card reveal">
+          <h3>Ceramic Braces</h3>
+          <p>Tooth-colored brackets that blend in. A discreet choice for teens and adults.</p>
+          <ul>
+            <li>Less visible than metal</li>
+            <li>Same effectiveness as metal</li>
+            <li>Stain-resistant brackets</li>
+          </ul>
+        </div>
+        <div class="ortho-card featured reveal">
+          <span class="badge">Popular</span>
+          <h3>Clear Aligners</h3>
+          <p>Removable, nearly invisible trays. Straighten teeth without brackets or wires.</p>
+          <ul>
+            <li>Nearly invisible</li>
+            <li>Removable for eating & cleaning</li>
+            <li>Comfortable, smooth plastic</li>
+          </ul>
+        </div>
+        <div class="ortho-card reveal">
+          <h3>Early Intervention</h3>
+          <p>For children (ages 7–10) to guide jaw growth and prevent bigger problems later.</p>
+          <ul>
+            <li>Phase 1 treatment</li>
+            <li>Guides proper jaw development</li>
+            <li>Reduces future treatment time</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ortho-note">
+        <strong>Not sure which is right for you?</strong> Book a free orthodontic consultation and Dr. Ananya will recommend the best plan.
+        <a href="#contact" class="btn btn-primary small">Free Consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Smile Corrections Animations -->
+  <section class="section section-alt" id="corrections">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Smile Corrections</span>
+        <h2>See how teeth are corrected</h2>
+        <p>Animated previews of common orthodontic problems and how treatment fixes them.</p>
+      </div>
+      <div class="corr-grid">
+        <div class="corr-card reveal">
+          <div class="corr-anim crossbite">
+            <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+              <!-- upper arch -->
+              <g class="upper">
+                <rect x="30" y="30" width="18" height="34" rx="6" class="tooth t1"/>
+                <rect x="52" y="28" width="18" height="36" rx="6" class="tooth t2"/>
+                <rect x="74" y="26" width="18" height="38" rx="6" class="tooth t3"/>
+                <rect x="96" y="26" width="18" height="38" rx="6" class="tooth t4"/>
+                <rect x="118" y="28" width="18" height="36" rx="6" class="tooth t5"/>
+                <rect x="140" y="30" width="18" height="34" rx="6" class="tooth t6"/>
+              </g>
+              <!-- lower arch -->
+              <g class="lower">
+                <rect x="30" y="76" width="18" height="34" rx="6" class="tooth b1"/>
+                <rect x="52" y="74" width="18" height="36" rx="6" class="tooth b2"/>
+                <rect x="74" y="72" width="18" height="38" rx="6" class="tooth b3"/>
+                <rect x="96" y="72" width="18" height="38" rx="6" class="tooth b4"/>
+                <rect x="118" y="74" width="18" height="36" rx="6" class="tooth b5"/>
+                <rect x="140" y="76" width="18" height="34" rx="6" class="tooth b6"/>
+              </g>
+            </svg>
+          </div>
+          <h3>Crossbite</h3>
+          <p>Upper teeth sit inside lower teeth. Treatment widens the arch and aligns the bite.</p>
+        </div>
+
+        <div class="corr-card reveal">
+          <div class="corr-anim overbite">
+            <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+              <g class="upper">
+                <rect x="30" y="18" width="18" height="34" rx="6" class="tooth"/>
+                <rect x="52" y="16" width="18" height="36" rx="6" class="tooth"/>
+                <rect x="74" y="14" width="18" height="38" rx="6" class="tooth"/>
+                <rect x="96" y="14" width="18" height="38" rx="6" class="tooth"/>
+                <rect x="118" y="16" width="18" height="36" rx="6" class="tooth"/>
+                <rect x="140" y="18" width="18" height="34" rx="6" class="tooth"/>
+              </g>
+              <g class="lower">
+                <rect x="30" y="86" width="18" height="30" rx="6" class="tooth"/>
+                <rect x="52" y="84" width="18" height="32" rx="6" class="tooth"/>
+                <rect x="74" y="82" width="18" height="34" rx="6" class="tooth"/>
+                <rect x="96" y="82" width="18" height="34" rx="6" class="tooth"/>
+                <rect x="118" y="84" width="18" height="32" rx="6" class="tooth"/>
+                <rect x="140" y="86" width="18" height="30" rx="6" class="tooth"/>
+              </g>
+            </svg>
+          </div>
+          <h3>Overbite</h3>
+          <p>Upper front teeth overlap lower teeth too much. Braces bring them into balance.</p>
+        </div>
+
+        <div class="corr-card reveal">
+          <div class="corr-anim crowding">
+            <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+              <g class="upper">
+                <rect x="26" y="26" width="16" height="36" rx="6" class="tooth t1"/>
+                <rect x="46" y="22" width="16" height="40" rx="6" class="tooth t2"/>
+                <rect x="66" y="20" width="16" height="42" rx="6" class="tooth t3"/>
+                <rect x="86" y="24" width="16" height="38" rx="6" class="tooth t4"/>
+                <rect x="106" y="20" width="16" height="42" rx="6" class="tooth t5"/>
+                <rect x="126" y="22" width="16" height="40" rx="6" class="tooth t6"/>
+                <rect x="146" y="26" width="16" height="36" rx="6" class="tooth t7"/>
+              </g>
+              <g class="lower">
+                <rect x="30" y="78" width="18" height="32" rx="6" class="tooth"/>
+                <rect x="52" y="76" width="18" height="34" rx="6" class="tooth"/>
+                <rect x="74" y="76" width="18" height="34" rx="6" class="tooth"/>
+                <rect x="96" y="76" width="18" height="34" rx="6" class="tooth"/>
+                <rect x="118" y="76" width="18" height="34" rx="6" class="tooth"/>
+                <rect x="140" y="78" width="18" height="32" rx="6" class="tooth"/>
+              </g>
+            </svg>
+          </div>
+          <h3>Crowding</h3>
+          <p>Teeth overlap due to lack of space. Braces/aligners create room and straighten.</p>
+        </div>
+
+        <div class="corr-card reveal">
+          <div class="corr-anim spacing">
+            <svg viewBox="0 0 200 140" xmlns="http://www.w3.org/2000/svg">
+              <g class="upper">
+                <rect x="28" y="26" width="18" height="36" rx="6" class="tooth"/>
+                <rect x="58" y="26" width="18" height="36" rx="6" class="tooth"/>
+                <rect x="88" y="26" width="18" height="36" rx="6" class="tooth"/>
+                <rect x="118" y="26" width="18" height="36" rx="6" class="tooth"/>
+                <rect x="148" y="26" width="18" height="36" rx="6" class="tooth"/>
+              </g>
+              <g class="lower">
+                <rect x="30" y="76" width="18" height="34" rx="6" class="tooth"/>
+                <rect x="60" y="76" width="18" height="34" rx="6" class="tooth"/>
+                <rect x="90" y="76" width="18" height="34" rx="6" class="tooth"/>
+                <rect x="120" y="76" width="18" height="34" rx="6" class="tooth"/>
+                <rect x="150" y="76" width="18" height="34" rx="6" class="tooth"/>
+              </g>
+            </svg>
+          </div>
+          <h3>Spacing / Gaps</h3>
+          <p>Unwanted gaps between teeth. Aligners close gaps for a uniform smile.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section section-alt" id="gallery">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Smile Gallery</span>
+        <h2>Real transformations</h2>
+        <p>Before & after results from our happy patients.</p>
+      </div>
+      <div class="ba-grid">
+        <div class="ba-card reveal">
+          <div class="ba-pair">
+            <img src="images/before-crossbite.svg" alt="Crossbite before" />
+            <img src="images/after-crossbite.svg" alt="Crossbite after" />
+          </div>
+          <h3>Crossbite Correction</h3>
+        </div>
+        <div class="ba-card reveal">
+          <div class="ba-pair">
+            <img src="images/before-crowding.svg" alt="Crowding before" />
+            <img src="images/after-crowding.svg" alt="Crowding after" />
+          </div>
+          <h3>Crowding Correction</h3>
+        </div>
+        <div class="ba-card reveal">
+          <div class="ba-pair">
+            <img src="images/before-spacing.svg" alt="Spacing before" />
+            <img src="images/after-spacing.svg" alt="Spacing after" />
+          </div>
+          <h3>Gap Closure</h3>
+        </div>
+        <div class="ba-card reveal">
+          <div class="ba-pair">
+            <img src="images/before-overbite.svg" alt="Overbite before" />
+            <img src="images/after-overbite.svg" alt="Overbite after" />
+          </div>
+          <h3>Overbite Correction</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Testimonials</span>
+        <h2>What our patients say</h2>
+      </div>
+      <div class="testimonials-grid">
+        <div class="testimonial">
+          <p>"Dr. Ananya is amazing with kids. My son actually looks forward to his appointments now!"</p>
+          <div class="author">— Meera R., Mother</div>
+          <div class="stars">★★★★★</div>
+        </div>
+        <div class="testimonial">
+          <p>"Got my clear aligners here. The whole process was smooth and the results are fantastic."</p>
+          <div class="author">— Arjun K.</div>
+          <div class="stars">★★★★★</div>
+        </div>
+        <div class="testimonial">
+          <p>"Best dental clinic in the city. Clean, professional and very affordable."</p>
+          <div class="author">— Lakshmi P.</div>
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Offers & Special Services -->
+  <section class="section" id="offers">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Offers & Special Care</span>
+        <h2>Exclusive discounts & special services</h2>
+        <p>We believe great smiles should be affordable. Enjoy our ongoing offers.</p>
+      </div>
+      <div class="offers-grid">
+        <div class="offer-card reveal">
+          <div class="offer-badge">20% OFF</div>
+          <h3>First Visit Discount</h3>
+          <p>20% off on your first consultation & cleaning.</p>
+        </div>
+        <div class="offer-card reveal">
+          <div class="offer-badge">Family</div>
+          <h3>Family Smile Package</h3>
+          <p>Special rates when 3+ family members book together.</p>
+        </div>
+        <div class="offer-card reveal">
+          <div class="offer-badge">Student</div>
+          <h3>Student Discount</h3>
+          <p>15% off braces/aligners with valid student ID.</p>
+        </div>
+        <div class="offer-card reveal">
+          <div class="offer-badge">EMI</div>
+          <h3>0% EMI Options</h3>
+          <p>Flexible monthly payments for orthodontic treatment.</p>
+        </div>
+      </div>
+      <div class="special-services reveal">
+        <h3>Special Services Provided</h3>
+        <ul class="checklist">
+          <li>Free orthodontic consultation & smile assessment</li>
+          <li>Digital 3D scanning & treatment simulation</li>
+          <li>Emergency dental care & same-day relief</li>
+          <li>Sedation dentistry for anxious patients</li>
+          <li>Post-treatment retainers & follow-up care</li>
+          <li>Home care guidance & hygiene kits</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Appointment & Follow-up -->
+  <section class="section section-alt" id="appointment-system">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Appointment System</span>
+        <h2>Book, track & follow up</h2>
+        <p>A simple, transparent process from booking to follow-up.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-step reveal">
+          <div class="step-num">1</div>
+          <h3>Book Online</h3>
+          <p>Fill the booking form or call us. We confirm within 24 hours.</p>
+        </div>
+        <div class="timeline-step reveal">
+          <div class="step-num">2</div>
+          <h3>Visit & Treatment</h3>
+          <p>Consultation, diagnosis and personalized treatment plan.</p>
+        </div>
+        <div class="timeline-step reveal">
+          <div class="step-num">3</div>
+          <h3>Follow-up (1 Month)</h3>
+          <p>Every patient is reviewed 1 month later on the same date of the next month.</p>
+        </div>
+        <div class="timeline-step reveal">
+          <div class="step-num">4</div>
+          <h3>Ongoing Care</h3>
+          <p>Regular check-ups to ensure your smile stays perfect.</p>
+        </div>
+      </div>
+      <div class="followup-note reveal">
+        <strong>Follow-up Protocol:</strong> After your treatment date, a follow-up appointment is automatically scheduled on the same date of the following month to monitor progress and adjust treatment as needed.
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Booking -->
+  <section class="section section-alt" id="contact">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <span class="eyebrow">Contact & Booking</span>
+        <h2>Book your appointment</h2>
+        <p>Fill in the form or call us directly. We'll confirm your slot within 24 hours.</p>
+        <div class="contact-details">
+          <div><strong>Address:</strong> near airport road, Kalani nagar main road, indore</div>
+          <div><strong>Phone:</strong> 91-8989733767, 91-7869416278</div>
+          <div><strong>Email:</strong> drananya999@gmail.com</div>
+          <div><strong>Hours:</strong> Mon–Sat: 9:00 AM – 7:00 PM</div>
+        </div>
+      </div>
+      <form class="booking-form" id="bookingForm">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="tel" name="phone" placeholder="Phone Number" required />
+        <input type="email" name="email" placeholder="Email (optional)" />
+        <select name="service" required>
+          <option value="">Select Service</option>
+          <option>Dental Cleaning</option>
+          <option>Teeth Whitening</option>
+          <option>Restoration / Filling</option>
+          <option>Dental Implant</option>
+          <option>Root Canal</option>
+          <option>Braces</option>
+          <option>Clear Aligners</option>
+          <option>Pediatric Dentistry</option>
+          <option>Other</option>
+        </select>
+        <input type="date" name="date" required />
+        <textarea name="message" rows="3" placeholder="Any notes or concerns"></textarea>
+        <button type="submit" class="btn btn-primary full">Request Appointment</button>
+        <p class="form-note" id="formNote"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Dr. Ananya's Dental & Orthodontic Clinic</h4>
+        <p>Creating confident smiles for the whole family.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#orthodontics">Orthodontics</a>
+        <a href="#corrections">Corrections</a>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="#services">Cleaning</a>
+        <a href="#services">Whitening</a>
+        <a href="#services">Implants</a>
+        <a href="#services">Braces & Aligners</a>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <a href="#">Facebook</a>
+        <a href="#">Instagram</a>
+        <a href="#">YouTube</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Dr. Ananya's Dental & Orthodontic Clinic. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

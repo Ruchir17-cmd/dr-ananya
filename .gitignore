@@ -1,0 +1,6 @@
+node_modules/
+data/appointments.json
+*.log
+.DS_Store
+Thumbs.db
+gen-*.js
