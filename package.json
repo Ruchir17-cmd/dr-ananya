@@ -1,16 +1,13 @@
 {
-  "name": "dr-ananya's-clinic",
+  "name": "dr-ananyas-clinic",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "description": "Dr. Ananya's Dental & Orthodontic Clinic website",
   "scripts": {
-    "start": "node server.js",
-    "dev": "node --watch server.js"
+    "start": "node dev-server.js",
+    "dev": "node --watch dev-server.js"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "dependencies": {
     "express": "^5.3.0"
   }
