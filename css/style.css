@@ -447,3 +447,46 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Scroll-led 3D treatment-room tour, inspired by the reference studio walkthrough. */
+.clinic-tour { height: 220vh; position: relative; background: #eaf3f0; }
+.clinic-tour-stage { height: 100svh; min-height: 600px; position: sticky; top: 0; overflow: hidden; isolation: isolate; background: #eaf3f0; }
+.clinic-tour-stage canvas { position: absolute; inset: 0; z-index: 0; display: block; width: 100%; height: 100%; }
+.tour-fallback { position: absolute; inset: 0; z-index: 0; overflow: hidden; background: linear-gradient(180deg, #f6faf8 0 67%, #dceae6 67%); }
+.tour-fallback::before { content: ''; position: absolute; width: min(64vw, 720px); height: 75%; top: 8%; left: 50%; transform: translateX(-50%); border: 18px solid #fff; border-bottom: 0; background: linear-gradient(180deg, #d4e9e5, #f6faf8); box-shadow: 0 0 0 1px #d6e4e0; }
+.tour-fallback-window { position: absolute; top: 19%; left: 50%; width: min(30vw, 340px); height: 18%; transform: translateX(-50%); background: #c3e2df; border: 10px solid #fff; }
+.tour-fallback-door { position: absolute; top: 8%; left: 50%; height: 76%; width: min(66vw, 760px); transform: translateX(-50%); border: 18px solid rgba(255,255,255,.9); border-bottom: 0; }
+.tour-fallback-chair { position: absolute; left: 50%; bottom: 12%; transform: translateX(-50%); display: grid; place-items: center; width: 130px; height: 185px; border-radius: 60px 60px 28px 28px; color: white; font-size: 46px; background: linear-gradient(145deg, #83b9b1, #397b76); box-shadow: 0 22px 36px rgba(37,83,78,.18); }
+.has-3d .tour-fallback { display: none; }
+.tour-copy { position: absolute; z-index: 2; top: clamp(108px, 17vh, 170px); left: max(5vw, calc((100vw - 1240px) / 2)); width: min(390px, 42vw); padding: 26px 28px; border: 1px solid rgba(220,233,230,.92); border-radius: 18px; background: rgba(255,255,255,.91); box-shadow: 0 18px 50px rgba(32,67,62,.12); backdrop-filter: blur(12px); transition: transform .45s ease, box-shadow .45s ease; }
+.tour-copy.is-arrived { transform: translateY(8px); box-shadow: 0 22px 55px rgba(32,67,62,.16); }
+.tour-kicker { display: block; margin-bottom: 10px; color: var(--primary); font-size: 11px; font-weight: 700; letter-spacing: .14em; }
+.tour-copy h2 { color: var(--ink); font-family: 'Playfair Display', serif; font-size: clamp(29px, 3.2vw, 42px); line-height: 1.12; letter-spacing: -.025em; }
+.tour-copy p { margin-top: 12px; color: var(--muted); font-size: 15px; }
+.tour-scroll-cue { position: absolute; z-index: 2; left: max(5vw, calc((100vw - 1240px) / 2)); bottom: 42px; display: flex; align-items: center; gap: 10px; color: #294947; font-size: 13px; font-weight: 600; }
+.tour-scroll-cue span { width: 18px; height: 28px; border: 1.5px solid #52817d; border-radius: 12px; position: relative; }
+.tour-scroll-cue span::after { content: ''; position: absolute; left: 7px; top: 5px; width: 2px; height: 6px; border-radius: 2px; background: var(--primary); animation: scrollNudge 1.5s ease-in-out infinite; }
+@keyframes scrollNudge { 0%,100% { transform: translateY(0); opacity: .4; } 50% { transform: translateY(7px); opacity: 1; } }
+.tour-caption { position: absolute; z-index: 2; right: max(5vw, calc((100vw - 1240px) / 2)); bottom: 44px; color: #486360; font-size: 12px; }
+.tour-progress { position: absolute; z-index: 3; left: 0; right: 0; bottom: 0; height: 4px; background: rgba(29,78,74,.14); }
+.tour-progress span { display: block; width: 100%; height: 100%; transform: scaleX(0); transform-origin: left center; background: var(--primary); }
+.tour-step-label { position: absolute; z-index: 2; right: max(5vw, calc((100vw - 1240px) / 2)); top: 32px; color: #486360; font-size: 10px; font-weight: 700; letter-spacing: .15em; }
+.clinic-tour.reduced-motion { height: auto; }
+.clinic-tour.reduced-motion .clinic-tour-stage { position: relative; height: min(76vh, 760px); min-height: 520px; }
+@media (max-width: 760px) {
+  .clinic-tour { height: 185vh; }
+  .clinic-tour-stage { min-height: 560px; }
+  .tour-copy { top: 105px; left: 18px; width: min(350px, calc(100% - 36px)); padding: 20px 22px; }
+  .tour-copy h2 { font-size: clamp(28px, 8vw, 36px); }
+  .tour-copy p { font-size: 14px; }
+  .tour-step-label { top: 24px; right: 20px; }
+  .tour-scroll-cue { left: 20px; bottom: 34px; }
+  .tour-caption { display: none; }
+  .tour-fallback::before, .tour-fallback-door { width: 84vw; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .clinic-tour { height: auto; }
+  .clinic-tour-stage { position: relative; height: min(76vh, 760px); min-height: 520px; }
+  .tour-scroll-cue span::after { animation: none; }
+  .tour-copy { transition: none; }
+}

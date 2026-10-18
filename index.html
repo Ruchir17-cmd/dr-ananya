@@ -31,6 +31,7 @@
       </a>
       <nav class="nav-links" id="navLinks">
         <a href="#about">About</a>
+        <a href="#clinic-tour">Clinic tour</a>
         <a href="#services">Services</a>
         <a href="#orthodontics">Orthodontics</a>
         <a href="#gallery">Smile Gallery</a>
@@ -69,6 +70,26 @@
           <small>— Priya S., Parent</small>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Scroll-driven Three.js walk-through of a calm treatment room -->
+  <section class="clinic-tour" id="clinic-tour" aria-label="3D tour of the dental treatment room">
+    <div class="clinic-tour-stage" id="clinicTourStage">
+      <div class="tour-fallback" aria-hidden="true">
+        <div class="tour-fallback-window"></div>
+        <div class="tour-fallback-door"></div>
+        <div class="tour-fallback-chair">🦷</div>
+      </div>
+      <div class="tour-copy" id="tourCopy" aria-live="polite">
+        <span class="tour-kicker">A LOOK INSIDE THE CLINIC</span>
+        <h2 id="tourTitle">A calm space<br />for confident care.</h2>
+        <p id="tourDescription">Scroll to step into our treatment room.</p>
+      </div>
+      <div class="tour-scroll-cue" aria-hidden="true"><span></span> Scroll to walk in</div>
+      <div class="tour-caption">A welcoming, modern dental suite</div>
+      <div class="tour-progress" aria-hidden="true"><span id="tourProgress"></span></div>
+      <span class="tour-step-label" id="tourStepLabel">ENTRANCE</span>
     </div>
   </section>
 
@@ -660,6 +681,7 @@
 
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script defer src="js/tooth-3d.js"></script>
+  <script defer src="js/clinic-tour.js"></script>
   <script defer src="js/main.js"></script>
 </body>
 </html>
