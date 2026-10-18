@@ -1,30 +1,3 @@
-// Gate particles
-const gp = document.getElementById('gateParticles');
-if (gp) {
-  for (let i = 0; i < 30; i++) {
-    const s = document.createElement('span');
-    s.style.left = Math.random() * 100 + '%';
-    s.style.animationDelay = (Math.random() * 6) + 's';
-    s.style.animationDuration = (4 + Math.random() * 4) + 's';
-    gp.appendChild(s);
-  }
-}
-
-// Gate enter
-const gate = document.getElementById('gate');
-const enterBtn = document.getElementById('enterBtn');
-function enterClinic() {
-  if (!gate) return;
-  gate.classList.add('open');
-  document.body.classList.remove('gate-locked');
-  setTimeout(() => gate.classList.add('fade'), 1300);
-  setTimeout(() => gate.remove(), 2200);
-}
-if (enterBtn) enterBtn.addEventListener('click', enterClinic);
-// auto-open after 4s
-setTimeout(() => { if (gate && document.body.contains(gate)) enterClinic(); }, 4500);
-document.body.classList.add('gate-locked');
-
 // Mobile menu toggle
 const menuToggle = document.getElementById('menuToggle');
 const navLinks = document.getElementById('navLinks');
@@ -64,9 +37,16 @@ window.addEventListener('scroll', () => {
   else header.classList.remove('scrolled');
 });
 
-// Scroll reveal
+// Gentle, staggered scroll reveals for the sections and treatment cards.
+document.querySelectorAll('section:not(.hero) .section-head, .service-card, .corridor-card, .braces-card, .ortho-card, .corr-card, .ba-card, .mandible-card, .room-card, .offer-card, .timeline-step, .testimonial, .special-services, .followup-note').forEach((element, index) => {
+  element.classList.add('reveal');
+  element.style.setProperty('--reveal-delay', `${(index % 4) * 70}ms`);
+});
+
 const reveals = document.querySelectorAll('.reveal');
-if ('IntersectionObserver' in window) {
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  reveals.forEach(element => element.classList.add('revealed'));
+} else if ('IntersectionObserver' in window) {
   const io = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); io.unobserve(e.target); } });
   }, { threshold: 0.15 });

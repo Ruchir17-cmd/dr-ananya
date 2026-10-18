@@ -11,22 +11,6 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- Immersive Gate -->
-  <div class="gate" id="gate">
-    <div class="gate-bg"></div>
-    <div class="gate-particles" id="gateParticles"></div>
-    <div class="gate-doors">
-      <div class="door door-left"></div>
-      <div class="door door-right"></div>
-    </div>
-    <div class="gate-content">
-      <div class="gate-logo">A</div>
-      <h1>Dr. Ananya's Dental Clinic</h1>
-      <p>Step inside for a brighter, healthier smile</p>
-      <button id="enterBtn" class="btn btn-primary gate-btn">Enter the Clinic →</button>
-      <small>Click to open the doors</small>
-    </div>
-  </div>
   <div class="topbar">
     <div class="container topbar-inner">
       <span>📍 near airport road, Kalani nagar main road, indore &nbsp;|&nbsp; 📞 91-8989733767, 91-7869416278 &nbsp;|&nbsp; ✉️ drananya999@gmail.com</span>
@@ -46,15 +30,11 @@
         <span class="logo-text">Dr. Ananya's<br/><small>Dental & Orthodontic Clinic</small></span>
       </a>
       <nav class="nav-links" id="navLinks">
-        <a href="#home">Home</a>
         <a href="#about">About</a>
-        <a href="#rooms">Rooms</a>
         <a href="#services">Services</a>
         <a href="#orthodontics">Orthodontics</a>
-        <a href="#corrections">Corrections</a>
-        <a href="#testimonials">Testimonials</a>
+        <a href="#gallery">Smile Gallery</a>
         <a href="#offers">Offers</a>
-        <a href="#appointment-system">Appointments</a>
         <a href="#contact">Contact</a>
       </nav>
       <a href="#contact" class="btn btn-primary nav-cta">Book Appointment</a>
@@ -80,8 +60,10 @@
         </div>
       </div>
       <div class="hero-visual">
-        <div class="hero-tooth">🦷</div>
-        <div class="hero-card">
+        <div class="tooth-scene" id="toothScene" role="img" aria-label="A softly rotating 3D tooth model">
+          <span class="tooth-fallback" aria-hidden="true">🦷</span>
+        </div>
+        <div class="hero-card reveal">
           <div class="hero-smile">😁</div>
           <p>"My child's smile transformed in just 14 months!"</p>
           <small>— Priya S., Parent</small>
@@ -214,27 +196,6 @@
           <h3>Extractions & Surgery</h3>
           <p>Simple and surgical extractions including wisdom teeth, done safely.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Service Corridor -->
-  <section class="section" id="corridor">
-    <div class="container">
-      <div class="section-head">
-        <span class="eyebrow">Walk Through</span>
-        <h2>Our dental suite corridor</h2>
-        <p>Scroll sideways to explore every service we offer.</p>
-      </div>
-      <div class="corridor">
-        <div class="corridor-card"><div class="service-icon">🦷</div><h3>Cleaning</h3><p>Scaling & polishing</p></div>
-        <div class="corridor-card"><div class="service-icon">✨</div><h3>Whitening</h3><p>Bleaching & brightening</p></div>
-        <div class="corridor-card"><div class="service-icon">🔧</div><h3>Restorations</h3><p>Fillings & crowns</p></div>
-        <div class="corridor-card"><div class="service-icon">🔩</div><h3>Implants</h3><p>Permanent replacements</p></div>
-        <div class="corridor-card"><div class="service-icon">👶</div><h3>Pediatric</h3><p>Kids dental care</p></div>
-        <div class="corridor-card"><div class="service-icon">🛡️</div><h3>Root Canal</h3><p>Painless RCT</p></div>
-        <div class="corridor-card"><div class="service-icon">📏</div><h3>Orthodontics</h3><p>Braces & aligners</p></div>
-        <div class="corridor-card"><div class="service-icon">🦷</div><h3>Extractions</h3><p>Safe removals</p></div>
       </div>
     </div>
   </section>
@@ -697,6 +658,8 @@
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script defer src="js/tooth-3d.js"></script>
+  <script defer src="js/main.js"></script>
 </body>
 </html>
