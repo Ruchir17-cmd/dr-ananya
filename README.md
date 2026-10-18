@@ -1,27 +1,27 @@
 # Dr. Ananya's Dental & Orthodontic Clinic
 
-A website for the clinic. The front end is fully static (HTML/CSS/JS). Bookings are handled by a tiny serverless function.
+A fully **static** website (HTML, CSS, vanilla JS). No build step, no server, no dependencies.
 
-## Local development
+## Why static?
+
+Vercel serves a project that has **no `package.json`** as a pure static site — serving `index.html`, `css/`, `js/`, and `images/` directly from the CDN. This is the most reliable way to host this site.
+
+## Deploy to Vercel (via GitHub)
+
+1. Import the repo in Vercel.
+2. Framework preset: **Other**.
+3. Build command: *(leave empty)*.
+4. Output directory: *(leave empty)*.
+5. Deploy.
+
+## Local preview
+
+You don't need any server. Just open `index.html` in a browser, or run a quick static server:
 
 ```bash
-npm install
-npm start
+npx serve .
 ```
 
-Then open http://localhost:3000
+## Booking form
 
-`dev-server.js` (Express) is only used for local preview; Vercel deploys the static site + `api/` function.
-
-## Deployment (Vercel + GitHub)
-
-1. Import the GitHub repo in Vercel.
-2. Framework preset: **Other**. No build command, output directory `/`.
-3. Deploy.
-
-Static assets (`css`, `js`, `images`) are served directly by Vercel's CDN, so the site renders correctly.
-
-## API
-
-- `POST /api/appointments` — create a booking (name, phone, service, date required)
-- `GET /api/appointments` — list bookings (in-memory per instance)
+The booking form composes a pre-filled WhatsApp message to **+91 89897 33767**, so patients can confirm instantly with no backend.

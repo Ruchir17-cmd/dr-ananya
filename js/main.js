@@ -33,30 +33,27 @@ if (menuToggle && navLinks) {
   navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
 }
 
-// Booking form -> Node API
+// Booking form -> WhatsApp (no backend needed)
 const form = document.getElementById('bookingForm');
 const note = document.getElementById('formNote');
 if (form) {
-  form.addEventListener('submit', async (e) => {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
     const data = Object.fromEntries(new FormData(form));
-    note.textContent = 'Submitting...';
-    try {
-      const res = await fetch('/api/appointments', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      });
-      const json = await res.json();
-      if (json.ok) {
-        note.textContent = `Thank you, ${data.name}! Your ${data.service} appointment request has been received (ID #${json.appointment.id}).`;
-        form.reset();
-      } else {
-        note.textContent = json.error || 'Something went wrong. Please try again.';
-      }
-    } catch (err) {
-      note.textContent = 'Network error. Please call us directly.';
-    }
+    const lines = [
+      'New Appointment Request',
+      '------------------------',
+      `Name: ${data.name}`,
+      `Phone: ${data.phone}`,
+      `Email: ${data.email || 'N/A'}`,
+      `Service: ${data.service}`,
+      `Preferred date: ${data.date}`,
+      `Notes: ${data.message || 'N/A'}`
+    ].join('\n');
+    const url = 'https://wa.me/918989733767?text=' + encodeURIComponent(lines);
+    note.textContent = `Thank you, ${data.name}! Opening WhatsApp to confirm your ${data.service} appointment...`;
+    window.open(url, '_blank');
+    form.reset();
   });
 }
 
